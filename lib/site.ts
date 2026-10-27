@@ -7,6 +7,13 @@ export const site = {
   foundingYear: 2026,
   locationCountry: "NP",
   social: [] as string[],
+  // Site credit in the footer and WebSite JSON-LD.
+  developer: {
+    name: "Prabish Dangi",
+    email: "prabishdc2002@gmail.com",
+    github: "https://github.com/prabish01",
+    linkedin: "https://www.linkedin.com/in/prabish-dangi-04a649211/",
+  },
 };
 
 export const locales = ["en", "ne"] as const;

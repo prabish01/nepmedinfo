@@ -127,6 +127,13 @@ export function websiteLd(lang: Locale) {
     description: dict.meta.siteDescription,
     inLanguage: ["en", "ne"],
     publisher: { "@id": orgId },
+    creator: {
+      "@type": "Person",
+      name: site.developer.name,
+      url: site.developer.linkedin,
+      email: site.developer.email,
+      sameAs: [site.developer.linkedin, site.developer.github],
+    },
     potentialAction: {
       "@type": "SearchAction",
       target: { "@type": "EntryPoint", urlTemplate: `${absoluteUrl(localePath(lang, "/search"))}?q={search_term_string}` },

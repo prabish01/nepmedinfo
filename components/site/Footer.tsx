@@ -1,4 +1,4 @@
-import { PhoneCallIcon } from "@phosphor-icons/react/dist/ssr";
+import { EnvelopeSimpleIcon, GithubLogoIcon, LinkedinLogoIcon, PhoneCallIcon } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 import Logo from "@/components/brand/Logo";
 import type { Dictionary } from "@/lib/i18n";
@@ -65,9 +65,30 @@ export default function Footer({ lang, dict }: { lang: Locale; dict: Dictionary 
         </div>
 
         <div className="flex flex-col gap-2 border-t border-white/10 py-6 text-[0.85rem] text-white/55 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {localizeDigits(new Date().getFullYear(), lang)} {site.name}. {f.rights}
-          </p>
+          <div className="space-y-1">
+            <p>
+              © {localizeDigits(new Date().getFullYear(), lang)} {site.name}. {f.rights}
+            </p>
+            <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span>
+                {f.credit}{" "}
+                <a href={site.developer.linkedin} target="_blank" rel="noopener noreferrer" className="font-medium text-white/80 hover:text-white hover:underline">
+                  {site.developer.name}
+                </a>
+              </span>
+              <span className="flex items-center gap-2.5">
+                <a href={site.developer.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${site.developer.name} on LinkedIn`} className="text-white/60 transition hover:text-white">
+                  <LinkedinLogoIcon size={16} />
+                </a>
+                <a href={site.developer.github} target="_blank" rel="noopener noreferrer" aria-label={`${site.developer.name} on GitHub`} className="text-white/60 transition hover:text-white">
+                  <GithubLogoIcon size={16} />
+                </a>
+                <a href={`mailto:${site.developer.email}`} aria-label={`Email ${site.developer.name}`} className="text-white/60 transition hover:text-white">
+                  <EnvelopeSimpleIcon size={16} />
+                </a>
+              </span>
+            </p>
+          </div>
           <p className="max-w-xl md:text-right">{f.notAdvice}</p>
         </div>
       </div>

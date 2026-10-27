@@ -127,6 +127,7 @@ const en = {
     privacy: "Privacy policy",
     contact: "Contact",
     rights: "All rights reserved.",
+    credit: "Designed & Developed by",
     notAdvice: "Content on this site is for information only and does not replace professional medical advice.",
   },
   notFound: {
