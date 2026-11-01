@@ -16,7 +16,12 @@ export const site = {
     // Same @id on every site I build so search engines merge them into one person.
     id: "https://github.com/prabish01#person",
     // Other sites I've built; listed in sameAs to link them together.
-    otherSites: ["https://www.budcompare.com"] as string[],
+    otherSites: [
+      "https://www.budcompare.com",
+      "https://www.dsgardeningservices.co.uk",
+      "https://www.theborrowingbureau.com",
+      "https://www.littleastonparkservices.co.uk",
+    ] as string[],
   },
 };
 
