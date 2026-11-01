@@ -13,6 +13,10 @@ export const site = {
     email: "prabishdc2002@gmail.com",
     github: "https://github.com/prabish01",
     linkedin: "https://www.linkedin.com/in/prabish-dangi-04a649211/",
+    // Same @id on every site I build so search engines merge them into one person.
+    id: "https://github.com/prabish01#person",
+    // Other sites I've built; listed in sameAs to link them together.
+    otherSites: ["https://www.budcompare.com"] as string[],
   },
 };
 

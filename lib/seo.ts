@@ -129,10 +129,11 @@ export function websiteLd(lang: Locale) {
     publisher: { "@id": orgId },
     creator: {
       "@type": "Person",
+      "@id": site.developer.id,
       name: site.developer.name,
       url: site.developer.linkedin,
       email: site.developer.email,
-      sameAs: [site.developer.linkedin, site.developer.github],
+      sameAs: [site.developer.linkedin, site.developer.github, ...site.developer.otherSites],
     },
     potentialAction: {
       "@type": "SearchAction",
